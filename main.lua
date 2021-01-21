@@ -38,19 +38,20 @@ local function background() end
 local function refresh(widget)
   local value = getValue(widget.options.Input)
 
-  local output = value < -60 and labels.one
-    or value < -20 and labels.two
-    or value < 20 and labels.three
-    or value < 60 and labels.four
-    or value < 100 and labels.five
+  local output = value < -620 and labels.one
+    or value < -220 and labels.two
+    or value < 220 and labels.three
+    or value < 620 and labels.four
+    or value < 1000 and labels.five
     or labels.six
 
   lcd.setColor(CUSTOM_COLOR, widget.options.Color)
-  lcd.drawText(widget.zone.x, widget.zone.y, value, DBLSIZE + CUSTOM_COLOR)
+  lcd.drawText(widget.zone.x, widget.zone.y + 2, "Ch.", SMLSIZE + CUSTOM_COLOR)
+  lcd.drawText(widget.zone.x + 24, widget.zone.y, output, DBLSIZE + CUSTOM_COLOR)
 end
 
 return {
-  name = "QuadStat",
+  name = "VtxBar",
   options = inputs,
   create = create,
   background = background,
