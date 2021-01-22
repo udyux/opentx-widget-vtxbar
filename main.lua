@@ -12,7 +12,7 @@ correct operation before use.
 ]]
 
 local inputs = {
-  { "Input", SOURCE, 115 },
+  { "Input", SOURCE, 92 },
   { "Color", COLOR, WHITE },
 }
 
@@ -40,9 +40,9 @@ local function refresh(widget)
 
   local output = value < -620 and labels.one
     or value < -220 and labels.two
-    or value < 220 and labels.three
-    or value < 620 and labels.four
-    or value < 1000 and labels.five
+    or value < 180 and labels.three
+    or value < 580 and labels.four
+    or value < 980 and labels.five
     or labels.six
 
   lcd.setColor(CUSTOM_COLOR, widget.options.Color)
