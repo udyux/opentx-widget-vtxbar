@@ -1,6 +1,6 @@
 # VtxBar
 
-OpenTX widget for the T16 and TX16S which displays VTx channel based on 6 position switch.
+OpenTX widget for color screen OpenTX radios which displays VTx channel based on 6 position switch.
 
 ## Disclaimer
 
@@ -14,6 +14,14 @@ This script does not rely on telemetry. It does not reflect the actual craft's s
 | ------ | ----------------------- |
 | Input  | Input that controls VTx |
 | Color  | Text color              |
+
+## Configuration
+
+Due to a 5 option limit imposed by OpenTX, the labels can only be set in the code. Don't worry, the process is simple:
+
+- Open the `main.lua` file from the extracted folder in a code editor or notepad.
+- Change the values (right side) in the `labels` variable that starts at line 19.
+- Save the file, and follow the installation instructions below.
 
 ## Installation
 
